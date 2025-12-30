@@ -209,6 +209,42 @@ export const adminApi = {
     return response.data;
   },
 
+  // Premium Management
+  getPremiumStatus: async () => {
+    const response = await api.get('/admin/premium/status');
+    return response.data;
+  },
+
+  getPremiumFeatures: async () => {
+    const response = await api.get('/admin/premium/features');
+    return response.data;
+  },
+
+  getPremiumPlans: async () => {
+    const response = await api.get('/admin/premium/plans');
+    return response.data;
+  },
+
+  togglePremiumMode: async (enabled: boolean) => {
+    const response = await api.put('/admin/premium/mode', { enabled });
+    return response.data;
+  },
+
+  togglePremiumFeature: async (featureId: string) => {
+    const response = await api.post(`/admin/premium/features/${featureId}/toggle`);
+    return response.data;
+  },
+
+  updatePremiumFeature: async (featureId: string, data: any) => {
+    const response = await api.put(`/admin/premium/features/${featureId}`, data);
+    return response.data;
+  },
+
+  updatePremiumPlan: async (planId: string, data: any) => {
+    const response = await api.put(`/admin/premium/plans/${planId}`, data);
+    return response.data;
+  },
+
 };
 
 export default api;

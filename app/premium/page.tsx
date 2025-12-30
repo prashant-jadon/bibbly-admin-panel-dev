@@ -133,7 +133,7 @@ function PremiumContent() {
               {editingFeature === feature.featureId && (
                 <FeatureEditForm
                   feature={feature}
-                  onSave={(data) => updateFeature.mutate({ featureId: feature.featureId, data })}
+                  onSave={(data: any) => updateFeature.mutate({ featureId: feature.featureId, data })}
                   onCancel={() => setEditingFeature(null)}
                 />
               )}
@@ -150,7 +150,7 @@ function PremiumContent() {
             <PlanCard
               key={plan.planId}
               plan={plan}
-              onUpdate={(data) => updatePlan.mutate({ planId: plan.planId, data })}
+              onUpdate={(data: any) => updatePlan.mutate({ planId: plan.planId, data })}
             />
           ))}
         </div>

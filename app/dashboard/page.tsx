@@ -9,6 +9,7 @@ import {
   MessageSquare,
   TrendingUp,
   AlertCircle,
+  AlertTriangle,
   CheckCircle2,
   ArrowUpRight,
   ArrowDownRight,
