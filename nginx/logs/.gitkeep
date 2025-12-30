@@ -1,0 +1,3 @@
+# Nginx logs directory
+# Logs will be written here by Nginx container
+
